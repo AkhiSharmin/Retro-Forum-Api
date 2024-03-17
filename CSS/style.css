@@ -2,3 +2,10 @@
 [data-theme] {
   background-color: #fff;
 }
+
+.banner {
+  background-image: url(../images/bgbanner.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: cover;
+}
