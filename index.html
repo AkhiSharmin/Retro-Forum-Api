@@ -9,12 +9,14 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.6.1/dist/full.min.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- font-awesome link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
 
 <body>
 
     <!-- navbar start  -->
-    <header class="max-w-7xl mx-auto">
+    <header class="max-w-7xl ml-auto mt-2">
         <div class="navbar">
             <div class="navbar-start">
                 <div class="dropdown">
@@ -28,12 +30,28 @@
                 </div>
                 <a class="btn btn-ghost text-3xl font-extrabold text-[#12132D]">ReTro</a>
             </div>
-            <div class="navbar-center hidden lg:flex">
+            <div class="navbar-end flex gap-3 items-center justify-center">
+
+                <button class="btn btn-ghost btn-circle bg-[#0307121A]">
+                    <i class="fa-solid fa-house-user"></i>
+                </button>
+
+                <button class="btn btn-ghost btn-circle bg-[#0307121A]">
+                    <i class="fa-solid fa-pencil"></i>
+                </button>
+
+                <button class="btn btn-ghost btn-circle bg-[#0307121A]">
+                    <i class="fa-solid fa-user-plus"></i>
+                </button>
+
+                <button class="btn btn-ghost btn-circle bg-[#0307121A]">
+                    <i class="fa-regular fa-flag"></i>
+                </button>
+
+                <div class="navbar-end">
+                    <a class="btn font-bold text-xl text-white bg-[#797DFC] border-none rounded-full">Sing In</a>
+                </div>
             </div>
-            <div class="navbar-end">
-                <a class="btn font-bold text-xl text-white bg-[#797DFC] border-none">Sing In</a>
-            </div>
-        </div>
     </header>
     <!-- navbar end  -->
 
