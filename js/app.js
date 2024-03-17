@@ -29,24 +29,27 @@ const singlePost = (posts) => {
             <h5 class="text-[14px] text-[#12132DCC] font-semibold">#${post.category}   Author: ${post.author.name}</h5>
             <h1 class="font-xl font-bold text-[#12132D] py-3">${post.title}</h1>
             <p class="font-[16px] text-[#12132D99]">${post.description}</p>
-            <div class="divider divider-neutral"></div>
+            <div class="divider divider-start text-[#12132D]"></div>
+            <div class="flex justify-between items-center w-[900px]">
+            <div>
+            <p>
+            <span class="pr-3"><i class="fa-regular fa-message"></i>
+            ${post.comment_count}</span>
 
-            <div class="flex items-center">
-                <p>
-                <span class="pr-3"><i class="fa-regular fa-message"></i>
-                ${post.comment_count}</span>
+            <span class="pr-3"><i class="fa-regular fa-eye"></i>
+            ${post.view_count}</span>
 
-                <span class="pr-3"><i class="fa-regular fa-eye"></i>
-                ${post.view_count}</span>
-
-                <span><i class="fa-regular fa-clock"></i>
-                ${post.posted_time}</span>
-
-                <p/>
-                <p>
-                    <i class="fa-regular fa-envelope-open"></i>
-                <p/>
+            <span><i class="fa-regular fa-clock"></i>
+            ${post.posted_time}</span>
+            <p/>
             </div>
+
+            <div class="bg-[#10B981] text-[#ddd] h-7 w-7 rounded-full cursor-pointer">
+            <p>
+               <i class="fa-solid fa-envelope-open ml-[6px]"></i>
+            <p/>
+            </div>
+
         </div>
     </div>
          
