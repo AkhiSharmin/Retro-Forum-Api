@@ -88,4 +88,46 @@ const singlePost = (posts) => {
     }
 }
 
+
+const latestPost = () => {
+    fetch('https://openapi.programming-hero.com/api/retro-forum/latest-posts')
+        .then(res => res.json())
+        .then(data => showLatestPost(data))
+}
+
+
+const showLatestPost = (latestPost) => {
+    const latestSinglePost = document.querySelector('.latestSinglePost')
+    for (latest of latestPost) {
+        console.log(latest);
+        const div = document.createElement('div')
+        div.innerHTML = `
+        <div class="card w-96 bg-base-100 shadow-xl">
+        <figure class="px-10 pt-10">
+          <img src="${latest.cover_image}" alt="Shoes" class="rounded-xl" />
+        </figure>
+        <div class="card-body items-center text-center">
+        <p><i class="fa-regular fa-calendar"></i> 
+        ${latest.author.posted_date}</p>
+          <h2 class="card-title">${latest.title}</h2>
+          <p class="text-[16px]">${latest.description}</p>
+          <div class="flex items-start">
+                <div class="h-12 w-12">
+                    <img src="${latest.profile_image}" class="rounded-full" />
+                </div>
+                <div>
+                    <p>${latest.author.name}</p>
+                    <span>${latest.author.designation}</span>
+                </div>
+          </div>
+        </div>
+      </div>
+        `
+        latestSinglePost.appendChild(div)
+    }
+}
+
+
+latestPost()
+
 AllPosts();
