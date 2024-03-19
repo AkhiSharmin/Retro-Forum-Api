@@ -83,7 +83,7 @@ const singlePost = (posts) => {
             titleDiv.appendChild(viewCountElement);
 
 
-            countAddedTitle.textContent = `${addedTitleCount}`;
+            countAddedTitle.textContent = `(${addedTitleCount})`;
         });
     }
 }
@@ -102,11 +102,11 @@ const showLatestPost = (latestPost) => {
         console.log(latest);
         const div = document.createElement('div')
         div.innerHTML = `
-        <div class="card w-96 bg-base-100 shadow-xl">
-        <figure class="px-10 pt-10">
+        <div class="card w-96 border-2 border-[#12132D26]">
+        <figure class="px-4 pt-5">
           <img src="${latest.cover_image}" alt="Shoes" class="rounded-xl" />
         </figure>
-        <div class="card-body items-center text-center">
+        <div class="card-body">
         <p><i class="fa-regular fa-calendar"></i> 
         ${latest.author.posted_date}</p>
           <h2 class="card-title">${latest.title}</h2>
@@ -115,9 +115,9 @@ const showLatestPost = (latestPost) => {
                 <div class="h-12 w-12">
                     <img src="${latest.profile_image}" class="rounded-full" />
                 </div>
-                <div>
-                    <p>${latest.author.name}</p>
-                    <span>${latest.author.designation}</span>
+                <div class="ml-4">
+                    <p class="text-[16px] font-bold ">${latest.author.name}</p>
+                    <span class="text-[14px]">${latest.author.designation}</span>
                 </div>
           </div>
         </div>
